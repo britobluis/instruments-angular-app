@@ -2,6 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.7.
 
+## Get Instrumentos List using XAMPP
+
+- You will need to install XAMPP, start Apache and MySQL services.
+- Go to XAMPP installation folder. Usually in `C:\xampp`
+- Go to `C:\xampp\htdocs` create a folder named `utn`
+- Copy file `lista_instrumentos.php` inside of fonder `C:\xampp\htdocs\utn`
+- You are ready to go!
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
