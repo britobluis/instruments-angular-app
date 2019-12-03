@@ -16,7 +16,7 @@ export class NavBarComponent {
     if (textoBusqueda !== '') {
       console.log(textoBusqueda);
       this.mensaje = '';
-      this.router.navigate(['/buscar', textoBusqueda]);
+      this.router.navigate(['/busqueda', textoBusqueda]);
     } else {
       this.mensaje = 'Ingrese un término de búsqueda';
     }
