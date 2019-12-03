@@ -1,3 +1,16 @@
-<p>
-  nav-bar works!
-</p>
+<table width="80%" align="center" style="border-collapse: collapse" border="1">
+  <tr>
+
+    <!-- Muestra mensaje de alerta si lo hubiera -->
+    <td><span style="color:red">{{mensaje}}&nbsp;&nbsp;</span></td>
+
+    <!-- Navega a component instrumentos-venta -->
+    <td><a [routerLink]="['instrumentos']">Instrumento</a></td>
+
+    <!-- Busqueda de precio menor a cantidad especificada -->
+    <td align="rigth">Precio Instrumento Menor a:</td>
+    <td><input type="number" (keydown.enter)="buscarInstrumentos(buscarTexto.value)" #buscarTexto /></td>
+    <td><button (click)="buscarInstrumentos(buscarTexto.value)">Buscar</button></td>
+
+  </tr>
+</table>
