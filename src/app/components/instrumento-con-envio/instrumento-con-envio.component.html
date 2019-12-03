@@ -1,3 +1,36 @@
-<p>
-  instrumento-con-envio works!
-</p>
+<table border="1" style="border-collapse: collapse" width="100%">
+  <tr>
+    <td align="center" width="200">
+      <img src="{{instrumentoInput.imagen}}" />
+    </td>
+    <td width="600" style="font-weight:bold; font-family:verdana; font-size:14px;">
+      <table>
+        <tr>
+          <td style="font-weight:bold; font-family:verdana; font-size:16px; color:blue">
+            {{instrumentoInput.instrumento}}
+          </td>
+        </tr>
+        <tr>
+          <td style="font-weight:bold; font-family:verdana; font-size:16px; color:red">
+            {{instrumentoInput.precio | currency}}
+          </td>
+        </tr>
+        <tr>
+          <td style="font-weight:bold; font-family:verdana; font-size:12px; color:green; vertical-align: center;">
+            <img src="/assets/img/camion.png">Envio gratis a todo el País
+          </td>
+        </tr>
+        <tr>
+          <td style="font-weight:bold; font-family:verdana; font-size:11px">
+            {{instrumentoInput.cantidadVendida}} vendidos
+          </td>
+        </tr>
+        <tr>
+          <td align="center" style="font-weight:bold; font-family:verdana; font-size:12px">
+            <button (click)="verDetalle(instrumentoInput.marca)">VER MAS</button>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

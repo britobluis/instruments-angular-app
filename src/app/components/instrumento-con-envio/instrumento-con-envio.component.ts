@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
+import { Instrumento } from 'src/app/interfaces/instrumento';
 
 @Component({
   selector: 'app-instrumento-con-envio',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InstrumentoConEnvioComponent implements OnInit {
 
-  constructor() { }
+  @Input() instrumentoInput: Instrumento;
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
+
+  public verDetalle(marca: string) {
+    this.router.navigate(['/detalle', marca]);
+  }
+
 
 }
