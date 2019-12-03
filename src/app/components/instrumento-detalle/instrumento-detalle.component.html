@@ -1,3 +1,49 @@
-<p>
-  instrumento-detalle works!
-</p>
+<table align="center" width="75%" border="1" style="border-collapse: collapse; font-family: verdana">
+  <tr>
+    <td width="60%">
+      <table>
+        <tr>
+          <td><img src="{{instrumentoDetalle.imagen}}" /></td>
+        </tr>
+        <tr>
+          <td>{{instrumentoDetalle.descripcion}}</td>
+        </tr>
+      </table>
+    </td>
+    <td width="40%">
+      <table>
+        <tr>
+          <td style="color: grey">{{instrumentoDetalle.cantidadVendida}} vendidos</td>
+        </tr>
+        <tr>
+          <td style="font-size: 28px">{{instrumentoDetalle.instrumento}}</td>
+        </tr>
+        <tr>
+          <td style="font-size: 35px"><br>{{instrumentoDetalle.precio | currency}}<br><br></td>
+        </tr>
+        <tr>
+          <td>Marca: {{instrumentoDetalle.marca}}</td>
+        </tr>
+        <tr>
+          <td>Modelo: {{instrumentoDetalle.modelo}}</td>
+        </tr>
+        <tr>
+          <td><br>Costo Envio</td>
+        </tr>
+        <tr *ngIf="instrumentoDetalle.costoEnvio == 'G'">
+          <td style="color: green"><img src="/assets/img/camion.png">Envio Gratis</td>
+        </tr>
+        <tr *ngIf="instrumentoDetalle.costoEnvio != 'G'">
+          <td>{{instrumentoDetalle.costoEnvio | currency}}</td>
+        </tr>
+        <tr>
+          <td align="center" style="background-color: brown; color:white; vertical-align: middle;"><a
+              style="color: white" [routerLink]="['instrumentos']">
+              <br>VOLVER<br>
+            </a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
